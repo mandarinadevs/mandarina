@@ -10,6 +10,7 @@
     <!-- INSERT STYLE -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mandarinacss/mandarina@master/mandarina.ini.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mandarinacss/mandarina@master/mandarina.min.css">
+    <link rel="stylesheet" href="../prismJS/prism.css">
 
 </head>
 <body>
@@ -43,6 +44,16 @@
         <a class="item" href="#title">Title</a>
         <a class="item" href="#tool">Tool</a>
     </div>
+    <!-- TOOL -->
+    <div class="tool right">
+        <a class="item text-15" href="#">🕵</a>
+        <a class="item text-15" href="#">📸</a>
+        <a class="item text-15" href="#">📞</a>
+        <a class="item text-15" href="#">👽</a>
+        <a class="item text-15" href="#">📬</a>
+        <a class="item text-15" href="#">🐦</a>
+        <p class="item">733 <br> Shares</p>
+    </div>
 
 
     
@@ -61,19 +72,29 @@
 
         <div class="row my-3">
             <div class="col lg-12">
-                <div class="code radius shadow">
-                    <div class="code-content">
-                        <!-- EJEMPLO DE CODE NO INTERPRETADO -->
-                        <!-- <pre class="text-blue"><code>&lt;tag&gt;&lt;/tag&gt;</code></pre> -->
-
-                        <pre class="text-yellow"><code>&lt;!-- MANDARINA CSS STYLES --&gt;</code></pre>
-                        <pre class="text-blue"><code>&lt;link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/mandarinacss/mandarina@master/mandarina.ini.css'&gt;</code></pre>
-                        <pre class="text-blue"><code>&lt;link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/mandarinacss/mandarina@master/mandarina.min.css'&gt;</code></pre>
-                        <br>
-                        <pre class="text-yellow"><code>&lt;!-- MANDARINA SCRIPTS --&gt;</code></pre>
-                        <pre class="text-blue"><code>&lt;script src='https://cdn.jsdelivr.net/gh/mandarinacss/mandarina@master/mandarina.min.js'&gt;&lt;/script&gt;</code></pre>
-                    </div>
-                </div>
+                <!-- EJEMPLO DE CODE NO INTERPRETADO -->
+                <!-- <pre class="text-blue"><code>&lt;tag&gt; &lt;/tag&gt;</code></pre> -->
+                <pre class="language-html line-numbers">
+                    <code class="language-html">
+                        <span class="token doctype">&lt;!DOCTYPE&gt;</span>
+                        <span class="token tag">&lt;html lang="en"&gt;</span>
+                        <span class="token tag">&lt;head&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;title&gt;Mandarina&lt;/title&gt;</span>
+                        <span class="token doctype">&nbsp;&nbsp;&lt;!-- MANDARINA CSS STYLES --&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/mandarinacss/mandarina@master/mandarina.ini.css'&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/mandarinacss/mandarina@master/mandarina.min.css'&gt;</span>
+                        <span class="token tag">&lt;/head&gt;</span>
+                        <span class="token tag">&lt;body&gt;</span>
+                        <span class="token doctype">&nbsp;&nbsp;&lt;!-- HTML --&gt;</span>
+                        <span></span>
+                        <span class="token doctype">&nbsp;&nbsp;&lt;!-- MANDARINA SCRIPTS --&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;script src='https://cdn.jsdelivr.net/gh/mandarinacss/mandarina@master/mandarina.min.js'&gt;&lt;/script&gt;</span>
+                        <span class="token tag">&lt;/body&gt;</span>
+                        <span class="token tag">&lt;/html&gt;</span>
+                    </code>
+                </pre>
             </div>
         </div>
 
@@ -198,15 +219,15 @@
         </div>
         <div class="row my-3">
             <div class="col lg-12">
-                <div class="code radius shadow">
-                    <div class="code-content">
-                        <pre class="text-yellow"><code>&lt;!-- ALERT --&gt;</code></pre>
-                        <pre class="text-blue"><code>&lt;div class="alert yellow"&gt;</code></pre>
-                        <pre class="text-blue"><code>&nbsp;&nbsp; &lt;b class="text-13"&gt;Titulo de la alerta&lt;/b&gt;</code></pre>
-                        <pre class="text-blue"><code>&nbsp;&nbsp; &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;</code></pre>
-                        <pre class="text-blue"><code>&lt;/div&gt;</code></pre>
-                    </div>
-                </div>
+                <pre class="language-html line-numbers">
+                    <code class="language-html">
+                        <span class="token doctype">&lt;!-- ALERT --&gt;</span>
+                        <span class="token tag">&lt;div class="alert yellow"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;b class="text-13"&gt;Titulo de la alerta&lt;/b&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;</span>
+                        <span class="token tag">&lt;/div&gt;</span>
+                    </code>
+                </pre>
             </div>
         </div>
 
@@ -221,68 +242,884 @@
         </div>
         <div class="row my-3">
             <div class="col lg-12">
-                <div class="code radius shadow">
-                    <div class="code-content">
-                        <pre class="text-yellow"><code>&lt;!-- ARTICLE --&gt;</code></pre>
-                        <pre class="text-blue"><code>&lt;p class="article text-gray"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;</code></pre>
-                    </div>
-                </div>
+                <pre class="language-html line-numbers">
+                    <code class="language-html">
+                        <span class="token doctype">&lt;!-- ARTICLE --&gt;</span>
+                        <span class="token tag">&lt;p class="article text-gray"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;</span>
+                    </code>
+                </pre>
             </div>
         </div>
 
         <!-- BREADCRUMB -->
         <a href="#breadcrumb" id="breadcrumb" class="link text-15 text-orange my-5 ml-1">Breadcrumb</a>
+        <div class="row my-3">
+            <div class="col lg-12">
+                <div class="breadcrumb">
+                    <a class="item" href="#">Ajustes</a>
+                    <a class="item" href="#">Generales</a>
+                    <a class="item" href="#">Pantalla</a>
+                    <a class="item" href="#">Brillo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-3">
+            <div class="col lg-12">
+                <pre class="language-html line-numbers">
+                    <code class="language-html">
+                        <span class="token doctype">&lt;!-- BREADCRUMB --&gt;</span>
+                        <span class="token tag">&lt;div class="breadcrumb"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp; &lt;a class="item" href="#"&gt;Ajustes&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp; &lt;a class="item" href="#"&gt;Generales&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp; &lt;a class="item" href="#"&gt;Pantalla&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp; &lt;a class="item" href="#"&gt;Brillo&lt;/a&gt;</span>
+                        <span class="token tag">&lt;/div&gt;</span>
+                    </code>
+                </pre>
+            </div>
+        </div>
 
         <!-- CAPTION -->
         <a href="#caption" id="caption" class="link text-15 text-orange my-5 ml-1">Caption</a>
+        <div class="row my-3">
+            <div class="col lg-12">
+                <div class="image" data-bg="images/third/cars/dan-gold-N7RiDzfF2iw-unsplash.jpg" data-height="300px">
+                    <div class="caption">
+                        <h4>Caption</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, ratione.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-3">
+            <div class="col lg-12">
+                <pre class="language-html line-numbers">
+                    <code class="language-html">
+                        <span class="token doctype">&lt;!-- CAPTION --&gt;</span>
+                        <span class="token tag">&lt;div class="image" data-bg="images/third/cars/dan-gold-N7RiDzfF2iw-unsplash.jpg" data-height="300px"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;div class="caption"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Caption&lt;/h4&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, ratione.&lt;p&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;/div&gt;</span>
+                        <span class="token tag">&lt;/div&gt;</span>
+                    </code>
+                </pre>
+            </div>
+        </div>
 
         <!-- CARD -->
         <a href="#card" id="card" class="link text-15 text-orange my-5 ml-1">Card</a>
 
+        <div class="row my-3">
+            <div class="col lg-8">
+                <div class="card shadow" data-height="400px">
+                    <div class="card-header">
+                        <img src="images/third/fruts/mandarina.jpg">
+                    </div>
+                    <div class="card-body">
+                        <h4>Naturaleza</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ipsum deserunt, temporibus earum erro nisi</p>
+                        <a href="#">Leer mas</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col lg-4">
+                <div class="card shadow" data-height="400px">
+                    <div class="card-header">
+                        <img src="images/third/fruts/mandarina.jpg">
+                    </div>
+                    <div class="card-body">
+                        <h4>Naturaleza</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ipsum deserunt, temporibus earum erro nisi</p>
+                        <a href="#">Leer mas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-3">
+            <div class="col lg-12">
+                <pre class="language-html line-numbers">
+                    <code class="language-html">
+                        <span class="token doctype">&lt;!-- CARD --&gt;</span>
+                        <span class="token tag">&lt;div class="card shadow" data-height="400px"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;div class="card-header"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="images/third/fruts/mandarina.jpg"&gt;&lt;/img&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;/div&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;div class="card-body"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Naturaleza&lt;/h4&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ipsum deserunt, temporibus earum erro nisi&lt;/p&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;Leer mas&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;/div&gt;</span>
+                        <span class="token tag">&lt;/div&gt;</span>
+                    </code>
+                </pre>
+            </div>
+        </div>
+
         <!-- CONTROL -->
         <a href="#control" id="control" class="link text-15 text-orange my-5 ml-1">Control</a>
+
+        <div class="row my-3">
+            <div class="col lg-12">
+                <div class="control shadow">
+                    <div class="control-header">
+                        <h5>Control</h5>
+                    </div>
+                    <div class="control-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, recusandae unde necessitatibus rem labore earum ratione quod modi doloremque. 
+                        Id ut exercitationem doloribus maxime expedita explicabo necessitatibus cum minima sit?
+                    </div>
+                    <div class="control-footer">
+                        <button class="btn l-red">Cancelar</button>
+                        <button class="btn l-green">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row my-3">
+            <div class="col lg-12">
+                <pre class="language-html line-numbers">
+                    <code class="language-html">
+                        <span class="token doctype">&lt;!-- CARD --&gt;</span>
+                        <span class="token tag">&lt;div class="control shadow"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;div class="control-header"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;h5&gt;Control&lt;/h5&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;/div&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;div class="control-body"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, recusandae unde necessitatibus rem labore earum ratione quod modi doloremque. Id ut exercitationem doloribus maxime expedita explicabo necessitatibus cum minima sit?&lt;/p&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;/div&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;div class="control-footer"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="btn l-red"&gt;Cancelar&lt;/p&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="btn l-green"&gt;Aceptar&lt;/p&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;/div&gt;</span>
+                        <span class="token tag">&lt;/div&gt;</span>
+                    </code>
+                </pre>
+            </div>
+        </div>
 
         <!-- DRAWER -->
         <a href="#drawer" id="drawer" class="link text-15 text-orange my-5 ml-1">Drawer</a>
 
+        <div class="row my-3">
+            <div class="col lg-12">
+                <pre class="language-html line-numbers">
+                    <code class="language-html">
+                        <span class="token doctype">&lt;!-- DRAWER --&gt;</span>
+                        <span class="token tag">&lt;button class="drawer-open right" data-target="#drawer1"&gt;&lt;/button&gt;</span>
+                        <span class="token tag">&lt;div class="drawer" id="drawer1"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;div class="brand"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;&lt;a href="#"&gt;Mandarina&lt;/a&gt;&lt;/h3&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;/div&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Dashboard&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Configuración&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Usuarios&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Avanzados&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Otros&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Terminos y condiciones&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Otros&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Salir&lt;/a&gt;</span>
+                        <span class="token tag">&lt;/div&gt;</span>
+                    </code>
+                </pre>
+            </div>
+        </div>
+
         <!-- DROPDOWN -->
         <a href="#dropdown" id="dropdown" class="link text-15 text-orange my-5 ml-1">Dropdown</a>
 
+        <div class="row my-3 text-center">
+            <div class="col lg-6">
+                <div class="dropdown">
+                    <button class="btn dropdown-open">Dropdown</button>
+                    <div class="content">
+                        <a class="item" href="#">Item 1</a>
+                        <a class="item" href="#">Item 2</a>
+                        <a class="item" href="#">Item 3</a>
+                        <a class="item" href="#">Item 4</a>
+                        <a class="item" href="#">Item 5</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col lg-6">
+                <div class="dropdown">
+                    <span class="dropdown-open">Dropdown</span>
+                    <div class="content">
+                        <a class="item" href="#">Item 1</a>
+                        <a class="item" href="#">Item 2</a>
+                        <a class="item" href="#">Item 3</a>
+                        <a class="item" href="#">Item 4</a>
+                        <a class="item" href="#">Item 5</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row my-3">
+            <div class="col lg-5">
+                <pre class="language-html line-numbers">
+                    <code class="language-html">
+                        <span class="token doctype">&lt;!-- DROPDOWN --&gt;</span>
+                        <span class="token tag">&lt;div class="dropdown"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;button class="dropdown-open"&gt;Dropdown&lt;/button&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;div class="content"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Item 1&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Item 2&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Item 3&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Item 4&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Item 5&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;/div&gt;</span>
+                        <span class="token tag">&lt;/div&gt;</span>
+                    </code>
+                </pre>
+            </div>
+            <div class="col lg-2">
+                <h6 class="h-100 w-100 flex-center">O</h6>
+            </div>
+            <div class="col lg-5">
+                <pre class="language-html line-numbers">
+                    <code class="language-html">
+                        <span class="token doctype">&lt;!-- DROPDOWN --&gt;</span>
+                        <span class="token tag">&lt;div class="dropdown"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;span class="dropdown-open"&gt;Dropdown&lt;/span&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;div class="content"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Item 1&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Item 2&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Item 3&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Item 4&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Item 5&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;/div&gt;</span>
+                        <span class="token tag">&lt;/div&gt;</span>
+                    </code>
+                </pre>
+            </div>
+        </div>
+
         <!-- FOOTER -->
         <a href="#footer" id="footer" class="link text-15 text-orange my-5 ml-1">Footer</a>
+        
+        <div class="row my-3">
+            <div class="col lg-12">
+                <pre class="language-html line-numbers">
+                    <code class="language-html">
+                        <span class="token doctype">&lt;!-- FOOTER --&gt;</span>
+                        <span class="token tag">&lt;footer class="footer light"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;h3 class="item"&gt;Mandarina&lt;/h3&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;p class="item"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas itaque possimus dolore impedit veniam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore inventore ipsa repudiandae facere repellat expedita dignissimos labore libero incidunt architecto!&lt;/p&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;div class="item"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#" class="mx-1"&gt;Facebook&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#" class="mx-1"&gt;Instagram&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#" class="mx-1"&gt;Twiter&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#" class="mx-1"&gt;Youtube&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#" class="mx-1"&gt;Linkedin&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;/div&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;div class="item"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;small&gt;Copyright &copy; 2021 Mandarina. Designed by &lt;b&gt;MANDARINA&lt;/b&gt;&lt;/small&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;/div&gt;</span>
+                        <span class="token tag">&lt;/footer&gt;</span>
+                    </code>
+                </pre>
+            </div>
+        </div>
 
         <!-- FORM -->
         <a href="#form" id="form" class="link text-15 text-orange my-5 ml-1">Form</a>
 
+        <div class="row my-3">
+            <div class="col lg-12">
+                <form class="form">
+                    <h3 class="center mb-3">Form</h3>
+                    <input type="search" placeholder="Buscador...">
+                    <input type="text" id="text" placeholder="Ingrese un texto">
+                    <input type="mail" id="mail" placeholder="Ingrese un correo electrónico">
+                    <input type="pass" id="pass" placeholder="Ingrese una contraseña">
+                    <select id="select">
+                        <option selected>Elija una fruta...</option>
+                        <option value="1">Pera</option>
+                        <option value="2">manzana</option>
+                        <option value="3">naranja</option>
+                        <option value="4">mandarina</option>
+                        <option value="5">sandia</option>
+                    </select>
+                    <div class="row">
+                        <div class="col md-6 p-0">
+                            <input type="checkbox" id="check">
+                            <label class="check" for="check">Check 1</label>
+                            <input type="checkbox" id="check-1">
+                            <label class="check" for="check-1">Check 2</label>
+                        </div>
+                        <div class="col md-6 p-0">
+                            <input type="radio" id="radio" name="radio">
+                            <label class="radio" for="radio">Radio 1</label>
+                            <input type="radio" id="radio-1" name="radio">
+                            <label class="radio" for="radio-1">Radio 2</label>
+                        </div>
+                    </div>
+                    <div class="flex-right">
+                        <button class="btn l-orange">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="row my-3">
+            <div class="col lg-12">
+                <pre class="language-html line-numbers"><code class="language-html">
+                    <span class="token doctype">&lt;!-- FORM --&gt;</span>
+                    <span class="token tag">&lt;form class="form"&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&lt;h3 class="center mb-3"&gt;Form&lt;/h3&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&lt;input type="search" placeholder="Buscador..."&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&lt;input type="text" id="text" placeholder="Ingrese un texto"&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&lt;input type="mail" id="mail" placeholder="Ingrese un correo electrónico"&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&lt;input type="pass" id="pass" placeholder="Ingrese una contraseña"&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&lt;select id="select"&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;option selected&gt;Elija una fruta...&lt;/option&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Elija una fruta...&lt;/option&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Pera&lt;/option&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;manzana&lt;/option&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;mandarina&lt;/option&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;sandia&lt;/option&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&lt;/select&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&lt;div class="row"&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col md-6 p-0"&gt;&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" id="check"&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="check" for="check"&gt;Check 1&lt;/label&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" id="check-1"&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col md-6 p-0"&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" id="radio"&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="radio" for="radio"&gt;radio 1&lt;/label&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" id="radio-1"&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="radio" for="radio-1"&gt;radio 2&lt;/label&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span>
+                    <span class="token tag">&nbsp;&nbsp;&lt;/div&gt;</span>
+                    <span class="token tag">&lt;/form&gt;</span>
+                </code></pre>
+            </div>
+        </div>
+
         <!-- LIST -->
         <a href="#list" id="list" class="link text-15 text-orange my-5 ml-1">List</a>
+
+        <div class="row my-3">
+            <div class="col lg-12">
+                <ul class="list light shadow">
+                    <li class="item" data-notify="13">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, eligendi.</li>
+                    <li class="item" data-notify="1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, eligendi.</li>
+                    <li class="item" data-notify="+999">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, eligendi.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="col lg-12">
+                <pre class="language-html line-numbers">
+                    <code class="language-html">
+                        <span class="token doctype">&lt;!-- LIST DISORDER --&gt;</span>
+                        <span class="token tag">&lt;ul class="list light shadow"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;li class="item" data-notify="1"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, eligendi.&lt;/li&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;li class="item" data-notify="13"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, eligendi.&lt;/li&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;li class="item" data-notify="+999"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, eligendi.&lt;/li&gt;</span>
+                        <span class="token tag">&lt;/ul&gt;</span>
+                    </code>
+                </pre>
+            </div>
+        </div>
+        
+        <div class="row my-3">
+            <div class="col lg-12">
+                <ol class="list light shadow">
+                    <li class="item" data-notify="13">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, eligendi.</li>
+                    <li class="item" data-notify="1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, eligendi.</li>
+                    <li class="item" data-notify="+999">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, eligendi.</li>
+                </ol>
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="col lg-12">
+                <pre class="language-html line-numbers">
+                    <code class="language-html">
+                        <span class="token doctype">&lt;!-- LIST DISORDER --&gt;</span>
+                        <span class="token tag">&lt;ol class="list light shadow"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;li class="item" data-notify="1"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, eligendi.&lt;/li&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;li class="item" data-notify="13"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, eligendi.&lt;/li&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;li class="item" data-notify="+999"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, eligendi.&lt;/li&gt;</span>
+                        <span class="token tag">&lt;/ol&gt;</span>
+                    </code>
+                </pre>
+            </div>
+        </div>
 
         <!-- MODAL -->
         <a href="#modal" id="modal" class="link text-15 text-orange my-5 ml-1">Modal</a>
 
+        <div class="row my-3">
+            <div class="col lg-12 text-center">
+                <button class="btn l-orange modal-open" data-target="#modal1">Modal</button>
+                <div class="modal" id="modal1">
+                    <div class="content">
+                        <div class="modal-header">
+                            <h5>Modal 1</h5>
+                        </div>
+                        <div class="modal-body">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, sunt?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn l-red modal-close">Cancelar</button>
+                            <button class="btn l-green modal-close">Aceptar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row my-3">
+            <div class="col lg-12">
+                <pre class="language-html line-numbers">
+                    <code class="language-html">
+                        <span class="token doctype">&lt;!-- MODAL --&gt;</span>
+                        <span class="token tag">&lt;button class="btn l-orange modal-open" data-target="#modal1"&gt;&lt;/button&gt;</span>
+                        <span class="token tag">&lt;div class="modal" id="modal1"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;div class="content"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="modal-header"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h5&gt;Modal&lt;/h5&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="modal-body"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, sunt?&lt;/p&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="modal-footer"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="btn l-red modal-close"&gt;&lt;/button&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="btn l-green modal-close"&gt;&lt;/button&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;/div&gt;</span>
+                        <span class="token tag">&lt;/div&gt;</span>
+                    </code>
+                </pre>
+            </div>
+        </div>
+
         <!-- NAVBAR -->
         <a href="#navbar" id="navbar" class="link text-15 text-orange my-5 ml-1">Navbar</a>
+
+        <div class="row my-3">
+            <div class="col lg-12">
+                <nav class="navbar white">
+                    <div class="brand">
+                        <a href="#"><img src="images/brand/mandarina.svg" alt="..." width="200px"></a>
+                    </div>
+                    <button class="menu-open" data-target="#menu1"></button>
+                    <div class="menu" id="menu1">
+                        <a class="item" href="#">Element</a>
+                        <a class="item" href="#">Element</a>
+                        <a class="item" href="#">Element</a>
+                        <a class="item" href="#">Element</a>
+                        <a class="item" href="#">Element</a>
+                        <div class="item dropdown">
+                            <a class="dropdown-open">Dropdown</a>
+                            <div class="content">
+                                <a class="item" href="#">Item 1</a>
+                                <a class="item" href="#">Item 2</a>
+                                <a class="item" href="#">Item 3</a>
+                                <a class="item" href="#">Item 4</a>
+                                <a class="item" href="#">Item 5</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="row my-3">
+            <div class="col lg-12">
+                <pre class="language-html line-numbers">
+                    <code class="language-html">
+                        <span class="token doctype">&lt;!-- NAVBAR --&gt;</span>
+                        <span class="token tag">&lt;nav class="navbar white"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;div class="brand"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="images/brand/mandarina.svg" alt="..." width="200px"&gt;&lt;/img&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;/div&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="menu-open" data-target="#menu1"&gt;&lt;/button&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;div class="menu" id="menu1"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Element&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Element&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Element&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Element&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Element&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Element&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="item dropdown"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="dropdown-open"&gt;Dropdown&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="content"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Item 1&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Item 2&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Item 3&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Item 4&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item" href="#"&gt;Item 5&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;/div&gt;</span>
+                        <span class="token tag">&lt;/nav&gt;</span>
+                    </code>
+                </pre>
+                
+            </div>
+        </div>
 
         <!-- PAGINATION -->
         <a href="#pagination" id="pagination" class="link text-15 text-orange my-5 ml-1">Pagination</a>
         
+        <div class="row my-3">
+            <div class="col lg-12">
+                <div class="pagination shadow">
+                    <a class="item prev" href="#"></a>
+                    <a class="item" href="#">1</a>
+                    <a class="item" href="#">2</a>
+                    <a class="item" href="#">3</a>
+                    <a class="item" href="#">4</a>
+                    <a class="item" href="#">5</a>
+                    <a class="item" href="#">6</a>
+                    <a class="item" href="#">7</a>
+                    <a class="item" href="#">8</a>
+                    <a class="item" href="#">9</a>
+                    <a class="item" href="#">10</a>
+                    <a class="item next" href="#"></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row my-3">
+            <div class="col lg-12">
+                <pre class="language-html line-numbers">
+                    <code class="language-html">
+                        <span class="token doctype">&lt;!-- PAGINATION --&gt;</span>
+                        <span class="token tag">&lt;div class="pagination shadow"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;a class="item prev" href="#"&gt;&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;a class="item" href="#"&gt;1&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;a class="item" href="#"&gt;2&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;a class="item" href="#"&gt;3&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;a class="item" href="#"&gt;4&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;a class="item" href="#"&gt;5&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;a class="item" href="#"&gt;6&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;a class="item" href="#"&gt;7&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;a class="item" href="#"&gt;8&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;a class="item" href="#"&gt;9&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;a class="item" href="#"&gt;10&lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;a class="item next" href="#"&gt;&lt;/a&gt;</span>
+                        <span class="token tag">&lt;/div&gt;</span>
+                    </code>
+                </pre>
+                
+            </div>
+        </div>
+
         <!-- SLIDER -->
         <a href="#slider" id="slider" class="link text-15 text-orange my-5 ml-1">Slider</a>
+
+        <div class="row my-3">
+            <div class="col lg-12">
+                <div class="slider" id="slider1" data-animation="radiance" data-duration="4" data-height="400px" data-min-height="350px">
+                    <div class="item" data-bg="images/third/cars/brittani-burns-fCD__Wr7IPs-unsplash.jpg"></div>
+                    <div class="item" data-bg="images/third/cars/dan-gold-N7RiDzfF2iw-unsplash.jpg"></div>
+                    <div class="item" data-bg="images/third/cars/elena-kuchko-R1xsM8OBdjE-unsplash.jpg"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row my-3">
+            <div class="col lg-12">
+                <pre class="language-html line-numbers">
+                    <code class="language-html">
+                        <span class="token doctype">&lt;!-- PAGINATION --&gt;</span>
+                        <span class="token tag">&lt;div class="slider" id="slider1" data-animation="radiance" data-duration="4" data-height="400px" data-min-height="350px"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;div class="item" data-bg="images/third/cars/brittani-burns-fCD__Wr7IPs-unsplash.jpg"&gt;&lt;/div&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;div class="item" data-bg="images/third/cars/dan-gold-N7RiDzfF2iw-unsplash.jpg"&gt;&lt;/div&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;div class="item" data-bg="images/third/cars/elena-kuchko-R1xsM8OBdjE-unsplash.jpg"&gt;&lt;/div&gt;</span>
+                        <span class="token tag">&lt;/div&gt;</span>
+                    </code>
+                </pre>
+                
+            </div>
+        </div>
 
         <!-- SPINNER -->
         <a href="#spinner" id="spinner" class="link text-15 text-orange my-5 ml-1">Spinner</a>
         
+        <div class="row my-3">
+            <div class="col lg-12">
+                <pre class="language-html line-numbers">
+                    <code class="language-html">
+                        <span class="token doctype">&lt;!-- SPINNER --&gt;</span>
+                        <span class="token tag">&lt;script&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;Spinner.show()</span>
+                        <span class="token tag">&lt;/script&gt;</span>
+                    </code>
+                </pre>
+                
+            </div>
+        </div>
+
         <!-- TAB -->
         <a href="#tab" id="tab" class="link text-15 text-orange my-5 ml-1">Tab</a>
+
+        <div class="row my-3">
+            <div class="col lg-12">
+                <div class="tab shadow" id="tab-example">
+                    <div class="tab-header">
+                        <div class="tab-open active" data-target="#tab-4">Control in Tab</div>
+                        <div class="tab-open" data-target="#tab-5">Table in Tab</div>
+                        <div class="tab-open" data-target="#tab-6">Grid in Tab</div>
+                    </div>
+                    <div class="tab-body">
+                        <div class="tab-content active" id="tab-4">
+                            <div class="control">
+                                <div class="control-header">
+                                    <h5>Control in Tab</h5>
+                                </div>
+                                <div class="control-body">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, recusandae unde necessitatibus rem labore earum ratione quod modi doloremque. 
+                                    Id ut exercitationem doloribus maxime expedita explicabo necessitatibus cum minima sit?
+                                </div>
+                                <div class="control-footer">
+                                    <button class="btn l-red">Cancelar</button>
+                                    <button class="btn l-green">Aceptar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content p-3" id="tab-5">
+                            <h3 class="p-3">Table on Clients</h3>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Edad</th>
+                                        <th>User</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>1</th>
+                                        <td>Abel</td>
+                                        <td>Maldonado</td>
+                                        <td>23</td>
+                                        <td>@abel</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2</th>
+                                        <td>Lolo</td>
+                                        <td></td>
+                                        <td>15</td>
+                                        <td>@lolo</td>
+                                    </tr>
+                                    <tr>
+                                        <th>3</th>
+                                        <td>Diego</td>
+                                        <td>Caldoreon</td>
+                                        <td>16</td>
+                                        <td>@diegoss</td>
+                                    </tr>
+                                    <tr>
+                                        <th>1</th>
+                                        <td>Abel</td>
+                                        <td>Maldonado</td>
+                                        <td>23</td>
+                                        <td>@abel</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2</th>
+                                        <td>Lolo</td>
+                                        <td></td>
+                                        <td>15</td>
+                                        <td>@lolo</td>
+                                    </tr>
+                                    <tr>
+                                        <th>3</th>
+                                        <td>Diego</td>
+                                        <td>Caldoreon</td>
+                                        <td>16</td>
+                                        <td>@diegoss</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="text-right text-8 p-3">Elaboración propia 2021</p>
+                        </div>
+                        <div class="tab-content p-3" id="tab-6">
+                            <div class="row">
+                                <div class="col lg-6">
+                                    <img class="image" src="images/third/cars/josh-rinard-2kAfdQX1r10-unsplash.jpg" alt="">
+                                </div>
+                                <div class="col lg-6 p-3">
+                                    <h5>Texto</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, provident omnis? Dolore blanditiis 
+                                        odit vitae odio temporibus cupiditate sunt autem maiores? Voluptate harum quis possimus obcaecati! Ex eveniet id dolorem?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row my-3">
+            <div class="col lg-12">
+                <pre class="language-html line-numbers">
+                    <code class="language-html">
+                        <span class="token doctype">&lt;!-- TAB --&gt;</span>
+                        <span class="token tag">&lt;div class="tab shadow" id="tab"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;div class="tab-header"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="tab-open active" data-target="#tab-1"&gt;Tab 1&lt;/div&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="tab-open" data-target="#tab-2"&gt;Tab 2&lt;/div&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="tab-open" data-target="#tab-3"&gt;Tab 3&lt;/div&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;/div&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;div class="tab-body"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="tab-content active" id="tab-1"&gt;</span>
+
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="tab-content p-3" id="tab-2"&gt;</span>
+
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="tab-content p-3" id="tab-3"&gt;</span>
+
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;/div&gt;</span>
+                        <span class="token tag">&lt;/div&gt;</span>
+                    </code>
+                </pre>
+            </div>
+        </div>
 
         <!-- TABLE -->
         <a href="#table" id="table" class="link text-15 text-orange my-5 ml-1">Table</a>
 
+        <div class="row my-3">
+            <div class="col lg-12">
+                <table class="table shadow">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Edad</th>
+                            <th>User</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>Abel</td>
+                            <td>Maldonado</td>
+                            <td>23</td>
+                            <td>@abel</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>Lolo</td>
+                            <td></td>
+                            <td>15</td>
+                            <td>@lolo</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>Diego</td>
+                            <td>Caldoreon</td>
+                            <td>16</td>
+                            <td>@diegoss</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="row my-3">
+            <div class="col lg-12">
+                <pre class="language-html line-numbers">
+                    <code class="language-html">
+                        <span class="token doctype">&lt;!-- TABLE --&gt;</span>
+                        <span class="token tag">&lt;table class="table shadow"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;thead&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;#&lt;/th&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Nombre&lt;/th&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Apellido&lt;/th&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Edad&lt;/th&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;User&lt;/th&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;/thead&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;tbody&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;1&lt;/th&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Nombre 1&lt;/th&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Apellido 1&lt;/th&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Edad 1&lt;/th&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;User 1&lt;/th&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;2&lt;/th&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Nombre 2&lt;/th&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Apellido 2&lt;/th&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Edad 2&lt;/th&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;User 2&lt;/th&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;3&lt;/th&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Nombre 3&lt;/th&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Apellido 3&lt;/th&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Edad 3&lt;/th&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;User 3&lt;/th&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;/tbody&gt;</span>
+                        <span class="token tag">&lt;/table&gt;</span>
+                    </code>
+                </pre>
+            </div>
+        </div>
+
         <!-- TITLE -->
         <a href="#title" id="title" class="link text-15 text-orange my-5 ml-1">Title</a>
 
+        <div class="row my-3">
+            <div class="col lg-12">
+                <button class="btn l-orange" data-title="Title que debe funcionar normalmente">Title</button>
+            </div>
+        </div>
+        
+        <div class="row my-3">
+            <div class="col lg-12">
+                <pre class="language-html line-numbers">
+                    <code class="language-html">
+                        <span class="token doctype">&lt;!-- TITLE --&gt;</span>
+                        <span class="token tag">&lt;button class="btn l-orange" data-title="Title que debe funcionar normalmente"&gt;&lt;/button&gt;</span>
+                    </code>
+                </pre>
+                
+            </div>
+        </div>
+
         <!-- TOOL -->
         <a href="#tool" id="tool" class="link text-15 text-orange my-5 ml-1">Tool</a>
+        
+        <div class="row my-3">
+            <div class="col lg-12">
+                <pre class="language-html">
+                    <code class="language-html">
+                        <span class="token doctype">&lt;!-- TOOL --&gt;</span>
+                        <span class="token tag">&lt;div class="tool"&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;a class="item text-15" href="#"&gt; &lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;a class="item text-15" href="#"&gt; &lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;a class="item text-15" href="#"&gt; &lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;a class="item text-15" href="#"&gt; &lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;a class="item text-15" href="#"&gt; &lt;/a&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;&lt;p class="item"&gt;733 &lt;br&gt; Shares&lt;/a&gt;</span>
+                        <span class="token tag">&lt;/div&gt;</span>
+                    </code>
+                </pre>
+            </div>
+        </div>
 
 
 
@@ -318,6 +1155,7 @@
 
     <!-- INSERT SCRIPT -->
     <script src="https://cdn.jsdelivr.net/gh/mandarinacss/mandarina@master/mandarina.min.js"></script>
+    <script src="../prismJS/prism.js"></script>
 
 </body>
 </html>
