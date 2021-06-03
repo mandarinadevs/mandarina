@@ -1,0 +1,7 @@
+pre{
+    user-select: text;
+}
+pre *{
+    cursor: text;
+    user-select: text;
+}

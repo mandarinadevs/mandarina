@@ -937,6 +937,7 @@ i,.i{ font-style: italic; }
     /* NO TOCAR */
     position: absolute;
     left: -100000px;
+    z-index: 99999;
 }
 .drawer-open::before{
     content: "\025b6";
@@ -951,7 +952,7 @@ i,.i{ font-style: italic; }
     padding-top: calc(var(--p)*3);
     padding-bottom: calc(var(--p)*3);
     background: var(--l-notify);
-    z-index: 2;
+    z-index: 9999;
     border-radius: 0 50% 50% 0;
     box-shadow: var(--shadow);
 }
@@ -970,7 +971,6 @@ i,.i{ font-style: italic; }
     z-index: 1;
     padding: calc(var(--p)*2);
     box-shadow: none;
-    display: flex;
     flex-wrap: wrap;
     align-content: center;
     background: var(--white);
@@ -1216,6 +1216,7 @@ input[type="checkbox"]:checked + label::after{
 }
 .list>.item{
     padding: calc(var(--p)*2);
+    padding-right: calc(var(--p)*5);
 }
 ul.list>.item::marker, ol.list>.item::marker{
     content: none;

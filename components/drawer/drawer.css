@@ -2,6 +2,7 @@
     /* NO TOCAR */
     position: absolute;
     left: -100000px;
+    z-index: 99999;
 }
 .drawer-open::before{
     content: "\025b6";
@@ -16,7 +17,7 @@
     padding-top: calc(var(--p)*3);
     padding-bottom: calc(var(--p)*3);
     background: var(--l-notify);
-    z-index: 2;
+    z-index: 9999;
     border-radius: 0 50% 50% 0;
     box-shadow: var(--shadow);
 }
@@ -35,7 +36,6 @@
     z-index: 1;
     padding: calc(var(--p)*2);
     box-shadow: none;
-    display: flex;
     flex-wrap: wrap;
     align-content: center;
     background: var(--white);
