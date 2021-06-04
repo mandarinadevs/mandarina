@@ -1734,3 +1734,18 @@ ol.list>.item::before{
     transform: scale(1.25);
     transition: all .25s;
 }
+/*
+ *
+ * COMPONENT : @preCode
+ * AUTOR : Mandarina
+ * FECHA : 2021/06/04
+ * NOTA  : ""
+ *
+*/
+pre{
+    user-select: text;
+}
+pre *{
+    cursor: text;
+    user-select: text;
+}
