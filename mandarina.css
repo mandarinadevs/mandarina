@@ -38,6 +38,7 @@ html,body{
 .bg-cover{ background-size: cover; }
 .bg-contain{ background-size: contain;}
 .bg-no-repeat{ background-repeat: no-repeat; }
+.bg-fixed{background-attachment: fixed;}
 /* OPACITY */
 .opacity-1{ opacity: .1 !important; }
 .opacity-2{ opacity: .2 !important; }
@@ -375,6 +376,9 @@ a:hover, a *:hover{
     transition: all .2s;
     cursor: pointer;
     filter: invert(.80);
+}
+a:hover img{
+    filter: none !important;
 }
 /* LINK */
 a.link{
@@ -981,7 +985,7 @@ i,.i{ font-style: italic; }
     left: unset;
     right: -300px;
 }
-.drawer .brand{
+.drawer>.brand{
     display: block;
     width: 100%;
 }
@@ -992,6 +996,30 @@ i,.i{ font-style: italic; }
     padding: var(--p);
     height: 30px;
 }
+.drawer>*>.item{
+    transition: all .2s;
+    display: block;
+    width: 100%;
+    padding: var(--p);
+    padding-left: calc(var(--p)*3);
+    height: 30px;
+}
+.drawer>*>*>.item{
+    transition: all .2s;
+    display: block;
+    width: 100%;
+    padding: var(--p);
+    padding-left: calc(var(--p)*5);
+    height: 30px;
+}
+.drawer>*>*>*>.item{
+    transition: all .2s;
+    display: block;
+    width: 100%;
+    padding: var(--p);
+    padding-left: calc(var(--p)*7);
+    height: 30px;
+}   
 .drawer.right>.item,.drawer.right>.brand{
     text-align: right;
 }
@@ -1508,7 +1536,7 @@ ol.list>.item::before{
     justify-content: center;
     align-items: center;
     background: rgba(248, 248, 248, 0.5);
-    z-index: 999;
+    z-index: 9999999999999999;
 }
 .spinner>.content{
     position: relative;
