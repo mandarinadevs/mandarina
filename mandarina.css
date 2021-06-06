@@ -304,6 +304,8 @@ hr{
 .text-sky{ color: var(--sky) !important; }
 .text-pink{ color: var(--pink) !important; }
 .text-brown{ color: var(--brown) !important; }
+/* NOTIFY */
+.text-notify{ color: var(--notify) !important; }
 
 /* DIV */
 /* GRAY SCALE */
@@ -333,6 +335,11 @@ hr{
 .l-sky,    .l-sky::before,    .l-sky::after{ background: var(--l-sky) !important;       color: var(--dark) !important; }
 .l-pink,   .l-pink::before,   .l-pink::after{ background: var(--l-pink) !important;     color: var(--dark) !important; }
 .l-brown,  .l-brown::before,  .l-brown::after{ background: var(--l-brown) !important;   color: var(--dark) !important; }
+/* NOTIFY */
+.notify,  .notify::before,  .notify::after{ background: var(--notify) !important;           color: var(--white) !important; }
+.l-notify,  .l-notify::before,  .l-notify::after{ background: var(--l-notify) !important;   color: var(--dark) !important; }
+
+
 /* ICONO */
 body.dark p{
     color: var(--white);
