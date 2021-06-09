@@ -21,10 +21,6 @@ class Mandarina
         this.getAll("[data-bg]").forEach(item => {
             item.style.backgroundImage += "url("+item.dataset.bg+")"
         })
-        // NOTIFY
-        this.getAll("[data-notify]").forEach(item => {
-            item.classList.add("notify")
-        })
         
     }
     getAll(att) {

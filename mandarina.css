@@ -1197,7 +1197,7 @@ select{
     padding: var(--p);
     font-size: 1rem;
     background: var(--light);
-    color: var(--gray);
+    color: var(--dark);
     margin-bottom: var(--m);
 }
 select:hover, select:focus{
@@ -1219,7 +1219,7 @@ textarea{
 }
 textarea:focus, textarea:hover{
     outline: none;
-    cursor: pointer;
+    cursor: text;
 }
 /* CHECK Y RADIO */
 input[type="checkbox"], input[type="radio"]{
@@ -1278,20 +1278,21 @@ input[type="checkbox"]:checked + label::after{
 .list{
     border: var(--border);
     border-radius: var(--border-radius);
+    overflow: hidden;
     display: block;
     width: 100%;
 }
-.list>.item{
+.list>li{
     padding: calc(var(--p)*2);
     padding-right: calc(var(--p)*5);
 }
-ul.list>.item::marker, ol.list>.item::marker{
+ul.list>li::marker, ol.list>li::marker{
     content: none;
 }
 ol.list{
     counter-reset: list;
 }
-ol.list>.item::before{
+ol.list>li::before{
     counter-increment: list;
     content: counter(list) ".";
     display: inline-block;
@@ -1756,7 +1757,7 @@ ol.list>.item::before{
     top: 100%;
     left: 100%;
     width: 150px;
-    z-index: 1000;
+    z-index: 100000;
     opacity: 0;
     transition: all .25s ease .25s;
 }
