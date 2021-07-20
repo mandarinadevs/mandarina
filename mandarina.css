@@ -289,7 +289,6 @@ h1,h2,h3,h4,h5,h6{
     font-weight: 500;
 }
 h1,h2,h3,h4,h5,h6,p,small,blockquote,cite{
-    
 }
 small{
     font-size: .75rem;
@@ -936,6 +935,8 @@ i,.i{ font-style: italic; }
     width: 100%;
     padding: var(--p);
     height: 30px;
+    color: var(--gray);
+    font-weight: 500;
 }
 .drawer>*>.item{
     transition: all .2s;
@@ -1047,6 +1048,7 @@ i,.i{ font-style: italic; }
     padding: var(--p);
     background: var(--white);
     border-bottom: 1px solid var(--light);
+    color: var(--gray);
 }
 .dropdown>.content>.item:hover{
     background: var(--light);
@@ -1299,6 +1301,7 @@ ol.list>li::before{
 .navbar .item{
     padding: var(--p);
     text-align: center;
+    color: var(--gray);
 }
 .navbar .brand{
     padding: var(--p);
@@ -1769,7 +1772,6 @@ ol.list>li::before{
  *
 */
 pre{
-    
 }
 
 
