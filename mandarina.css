@@ -1669,6 +1669,7 @@ ol.list>li::before{
  *
 */
 .m-tag{
+    font-size: calc(var(--font-size)*.8);
     text-decoration: none;
     height: calc(var(--font-size) + 16px);
     background: var(--notify);
@@ -1695,6 +1696,9 @@ ol.list>li::before{
     position: absolute;
     right: -7px;
     align-self: center;
+}
+.m-tag:hover{
+    filter: opacity(.75);
 }
 /*
  *
