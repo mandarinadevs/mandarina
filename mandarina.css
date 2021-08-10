@@ -1250,6 +1250,7 @@ ol.list>li::before{
     padding: var(--p);
     transition: all 1s;
     transform: translateY(-200%);
+    min-width: 25%;
 }
 .modal.active{
     display: flex;
@@ -1768,6 +1769,61 @@ ol.list>li::before{
     transform: scale(1.25);
     transition: all .25s;
 }
+/*
+ *
+ * COMPONENT : @mandarinaDice
+ * AUTOR : Mandarina
+ * FECHA : 2021/06/01
+ * NOTA  : ""
+ *
+*/
+.mandarinaDice{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(248, 248, 248, 0.5);
+    z-index: 990;
+    backdrop-filter: blur(15px);
+}
+.mandarinaDice>.content{
+    border: var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: var(--p);
+    transition: all 1s;
+    transform: translateY(-200%);
+    min-width: 25%;
+    text-align: center;
+}
+.mandarinaDice.active{
+    display: flex;
+}
+.mandarinaDice.active>.content{
+    transition: all 1s;
+    transform: translateY(0%);
+}
+
+.mandarinaDice>.content>.dice-header{
+    padding: calc(var(--p)*2);
+}
+.mandarinaDice>.content>.dice-body{
+    padding: calc(var(--p)*2);
+}
+.mandarinaDice>.content>.dice-footer{
+    padding: calc(var(--p)*2);
+    display: flex;
+    justify-content: center;
+}
+.mandarinaDice>.content>.dice-footer>*{
+    margin-left: var(--m);
+    margin-right: var(--m);
+}
+
 /*
  *
  * COMPONENT : @preCode

@@ -24,14 +24,14 @@ class Mandarina
         
         // Iniciar Mandarina Dice
         document.querySelector("body").innerHTML += `
-            <div id="mandarinaDice" class="modal"></div>
+            <div id="mandarinaDice" class="mandarinaDice"></div>
         `
     }
     getAll(att) {
         return document.querySelectorAll(att)
     }
 
-    static dice() {
+    static dice(obj) {
         return new Promise((resolve, reject) => {
             // Desagregar objeto mensaje
             let type    = (obj.type)?obj.type:"success" // ["success", "warning", "info", "error"]
@@ -40,13 +40,13 @@ class Mandarina
             let arrBtns = (obj.btn)?obj.btn:[{text:"Aceptar",color:"l-green"},{text:"Cancelar",color:"l-red"}]
             let body    = `
                 <div class="content white">
-                    <div class="modal-header" id="mandarinaDiceTitle">
+                    <div class="dice-header" id="mandarinaDiceTitle">
                         <h5>${title} - ${type}</h5>
                     </div>
-                    <div class="modal-body" id="mandarinaDiceText">
+                    <div class="dice-body" id="mandarinaDiceText">
                         <p>${text}</p>
                     </div>
-                    <div class="modal-footer" id="mandarinaDiceBtns"></div>
+                    <div class="dice-footer" id="mandarinaDiceBtns"></div>
                 </div>
             `
     

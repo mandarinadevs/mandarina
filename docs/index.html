@@ -8,10 +8,10 @@
     <title>Mandarina CSS</title>
 
     <!-- INSERT STYLE -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mandarinacss/mandarina@master/mandarina.ini.css"> -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mandarinacss/mandarina@master/mandarina.min.css"> -->
-    <link rel="stylesheet" href="../mandarina.css">
-    <link rel="stylesheet" href="../mandarina.ini.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mandarinacss/mandarina@master/mandarina.ini.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mandarinacss/mandarina@master/mandarina.min.css">
+    <!-- <link rel="stylesheet" href="../mandarina.css"> -->
+    <!-- <link rel="stylesheet" href="../mandarina.ini.css"> -->
     <link rel="stylesheet" href="prismJS/prism.css">
 
 </head>
@@ -45,6 +45,8 @@
         <a class="item" href="#tab">Tab</a>
         <a class="item" href="#table">Table</a>
         <a class="item" href="#tool">Tool</a>
+        <p class="item text-notify">Otros Gajos</p>
+        <a class="item" href="#dice">Mandarina Dice</a>
     </div>
     
     <main class="container">
@@ -1118,6 +1120,48 @@
             </div>
         </div>
 
+        <!-- Otros Gajos -->
+
+        <!-- SPINNER -->
+        <a href="#dice" id="dice" class="link text-15 text-orange my-5 ml-1">Mandarina Dice</a>
+
+        <div class="row">
+            <div class="col lg-12 center">
+                <button class="btn l-purple" onclick="openMandarinaDice()">Demostración</button>
+            </div>
+        </div>
+
+        <script>
+            function openMandarinaDice() {
+                Mandarina.dice({text:"Esta es una demostración de alerta utilizando promesas"})
+                .then(sel => {
+                    switch (sel) {
+                        case "0":
+                            Mandarina.dice({text:"¿Estas seguro de continuar?",btn:[{text:"Ok",color:"l-notify"}]})
+                            break;
+                    
+                        case "1":
+                            Mandarina.dice({text:"¿Estas seguro de cancelar?",btn:[{text:"Sí",color:"l-notify"}]})
+                            break;
+                    }
+                })
+            }
+        </script>
+
+        <div class="row my-3">
+            <div class="col lg-12">
+                <pre class="language-html line-numbers">
+                    <code class="language-html">
+                        <span class="token doctype">&lt;!-- MANDARINA DICE --&gt;</span>
+                        <span class="token tag">&lt;script&gt;</span>
+                        <span class="token tag">&nbsp;&nbsp;Mandarina.dice({title:"",text:"",type:"",btn:[{text:"",color:""}]})</span>
+                        <span class="token tag">&nbsp;&nbsp;.then(sel => {})</span>
+                        <span class="token tag">&lt;/script&gt;</span>
+                    </code>
+                </pre>
+                
+            </div>
+        </div>
 
 
 
