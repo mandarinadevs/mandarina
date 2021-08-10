@@ -3,7 +3,7 @@
  * COMPONENT : @Mandarina
  * AUTOR : Mandarina
  * FECHA : 2021/06/01
- * NOTA  : ""
+ * NOTA  : "Contiene el metodo dice"
  *
 */
 class Mandarina
@@ -22,9 +22,54 @@ class Mandarina
             item.style.backgroundImage += "url("+item.dataset.bg+")"
         })
         
+        // Iniciar Mandarina Dice
+        document.querySelector("body").innerHTML += `
+            <div id="mandarinaDice" class="modal"></div>
+        `
     }
     getAll(att) {
         return document.querySelectorAll(att)
+    }
+
+    static dice() {
+        return new Promise((resolve, reject) => {
+            // Desagregar objeto mensaje
+            let type    = (obj.type)?obj.type:"success" // ["success", "warning", "info", "error"]
+            let title   = (obj.title)?obj.title:"Aviso"
+            let text    = obj.text
+            let arrBtns = (obj.btn)?obj.btn:[{text:"Aceptar",color:"l-green"},{text:"Cancelar",color:"l-red"}]
+            let body    = `
+                <div class="content white">
+                    <div class="modal-header" id="mandarinaDiceTitle">
+                        <h5>${title} - ${type}</h5>
+                    </div>
+                    <div class="modal-body" id="mandarinaDiceText">
+                        <p>${text}</p>
+                    </div>
+                    <div class="modal-footer" id="mandarinaDiceBtns"></div>
+                </div>
+            `
+    
+            // Escribir mensaje e Insertar botones
+            document.querySelector("#mandarinaDice").innerHTML = body
+            document.querySelector("#mandarinaDice").classList.add("active")
+            document.querySelector("#mandarinaDice .content").classList.add("active")
+            var i = 0
+            arrBtns.forEach(btn => {
+                document.querySelector("#mandarinaDice #mandarinaDiceBtns").innerHTML += `
+                    <button class="btn ${btn.color}" data-index="${i++}">${btn.text}</button>
+                `
+            })
+    
+            document.querySelectorAll("#mandarinaDice button").forEach(btn => {
+                btn.addEventListener("click", e => {
+                    // Limpiar mensaje y resolver
+                    document.querySelector("#mandarinaDice").innerHTML = ""
+                    document.querySelector("#mandarinaDice").classList.remove("active")
+                    resolve(e.target.dataset.index)
+                })
+            })
+        })
     }
 }
 new Mandarina()
