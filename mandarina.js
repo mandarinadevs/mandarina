@@ -1,3 +1,13 @@
+
+window.addEventListener("DOMContentLoaded", () => {
+    // Iniciar Mandarina Dice
+    let dice = document.createElement("div")
+    dice.setAttribute("class", "mandarinaDice")
+    dice.setAttribute("id", "mandarinaDice")
+    document.querySelector("body").appendChild(dice)
+    console.log("Mandarina is ready...")
+})
+
 /*
  *
  * COMPONENT : @Mandarina
@@ -22,10 +32,6 @@ class Mandarina
             item.style.backgroundImage += "url("+item.dataset.bg+")"
         })
         
-        // Iniciar Mandarina Dice
-        document.querySelector("body").innerHTML += `
-            <div id="mandarinaDice" class="mandarinaDice"></div>
-        `
     }
     getAll(att) {
         return document.querySelectorAll(att)
@@ -37,7 +43,7 @@ class Mandarina
             let type    = (obj.type)?obj.type:"success" // ["success", "warning", "info", "error"]
             let title   = (obj.title)?obj.title:"Aviso"
             let text    = obj.text
-            let arrBtns = (obj.btn)?obj.btn:[{text:"Aceptar",color:"l-green"},{text:"Cancelar",color:"l-red"}]
+            let arrBtns = (obj.btn)?obj.btn:[{text:"Ok",color:"l-notify"}]
             let body    = `
                 <div class="content white">
                     <div class="dice-header" id="mandarinaDiceTitle">

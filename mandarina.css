@@ -1250,7 +1250,11 @@ ol.list>li::before{
     padding: var(--p);
     transition: all 1s;
     transform: translateY(-200%);
-    min-width: 25%;
+    
+    min-width: 75%;
+    max-height: 80%;
+    height: 100%;
+    overflow-y: hidden;
 }
 .modal.active{
     display: flex;
@@ -1262,14 +1266,26 @@ ol.list>li::before{
 
 .modal>.content>.modal-header{
     padding: calc(var(--p)*2);
+    
+    height: 85px;
 }
 .modal>.content>.modal-body{
     padding: calc(var(--p)*2);
+    
+    height: calc(100% - 185px);
+    overflow-y: auto;
 }
 .modal>.content>.modal-footer{
     padding: calc(var(--p)*2);
     display: flex;
     justify-content: flex-end;
+    
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: var(--white);
+    width: 100%;
+    height: 100px;
 }
 .modal>.content>.modal-footer>*{
     margin-left: var(--m);
