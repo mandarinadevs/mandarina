@@ -282,3 +282,65 @@ class MandarinaSlider
 document.querySelectorAll(".slider").forEach(slider => {
     new MandarinaSlider(slider)
 })
+<<<<<<< HEAD
+=======
+/*
+ *
+ * COMPONENT : @Spinner
+ * AUTOR : Mandarina
+ * FECHA : 2021/06/01
+ * NOTA  : ""
+ *
+*/
+class Spinner
+{
+
+    static show() {
+        document.querySelector(".spinner").classList.add("active")
+    }
+
+    static hide() {
+        document.querySelector(".spinner").classList.remove("active")
+    }
+}
+new Spinner()
+/*
+ *
+ * COMPONENT : @Tab
+ * AUTOR : Mandarina
+ * FECHA : 2021/06/01
+ * NOTA  : ""
+ *
+*/
+class Tab
+{
+    constructor(tab) {
+        this.tab = "#"+tab.id
+        
+        document.querySelectorAll(this.tab+">.tab-header>.tab-open").forEach(tabOpen => {
+            tabOpen.addEventListener("click", () => {
+                // DESACTIVAR TODOS LOS TAB
+                document.querySelectorAll(this.tab+">.tab-header>.tab-open, "+this.tab+">.tab-body>.tab-content").forEach(elem => {
+                    elem.classList.remove("active")
+                })
+
+                // ACTIVAR TAB
+                tabOpen.classList.add("active")
+                document.querySelector(this.tab+">.tab-body>.tab-content"+tabOpen.dataset.target).classList.add("active")
+            })
+        })
+    }
+}
+document.querySelectorAll(".tab").forEach(tab => {
+    new Tab(tab)
+})
+
+/*
+ *
+ * COMPONENT : @
+ * AUTOR : Mandarina
+ * FECHA : 2021/06/01
+ * NOTA  : ""
+ *
+*/
+>>>>>>> d4ea1947a1f4fc07696664059a8117dc1a7a619b
