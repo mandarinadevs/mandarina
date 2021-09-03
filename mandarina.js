@@ -1,364 +1,226 @@
 
 window.addEventListener("DOMContentLoaded", () => {
+
+    // Propiedades básicas
+    Mandarina.getAll("[data-height]").forEach( item => item.style.height += item.dataset.height )
+    Mandarina.getAll("[data-width]").forEach( item => item.style.width += item.dataset.width )
+    Mandarina.getAll("[data-bg]").forEach( item => item.style.backgroundImage += "url("+item.dataset.bg+")" )
+
+
     // Iniciar Mandarina Dice
     let dice = document.createElement("div")
     dice.setAttribute("class", "mandarinaDice")
     dice.setAttribute("id", "mandarinaDice")
-    document.querySelector("body").appendChild(dice)
-    console.log("Mandarina is ready...")
-})
-
-/*
- *
- * COMPONENT : @Mandarina
- * AUTOR : Mandarina
- * FECHA : 2021/06/01
- * NOTA  : "Contiene el metodo dice"
- *
-*/
-class Mandarina
-{
-    constructor() {
-        // HEIGHT
-        this.getAll("[data-height]").forEach(item => {
-            item.style.height += item.dataset.height
-        })
-        // WIDTH
-        this.getAll("[data-width]").forEach(item => {
-            item.style.width += item.dataset.width
-        })
-        // BACKGROUND
-        this.getAll("[data-bg]").forEach(item => {
-            item.style.backgroundImage += "url("+item.dataset.bg+")"
-        })
-        
-    }
-    getAll(att) {
-        return document.querySelectorAll(att)
-    }
-
-    static dice(obj) {
-        return new Promise((resolve, reject) => {
-            // Desagregar objeto mensaje
-            let type    = (obj.type)?obj.type:"success" // ["success", "warning", "info", "error"]
-            let title   = (obj.title)?obj.title:"Aviso"
-            let text    = obj.text
-            let arrBtns = (obj.btn)?obj.btn:[{text:"Ok",color:"l-notify"}]
-            let body    = `
-                <div class="content white">
-                    <div class="dice-header" id="mandarinaDiceTitle">
-                        <h5>${title} - ${type}</h5>
-                    </div>
-                    <div class="dice-body" id="mandarinaDiceText">
-                        <p>${text}</p>
-                    </div>
-                    <div class="dice-footer" id="mandarinaDiceBtns"></div>
-                </div>
-            `
-    
-            // Escribir mensaje e Insertar botones
-            document.querySelector("#mandarinaDice").innerHTML = body
-            document.querySelector("#mandarinaDice").classList.add("active")
-            document.querySelector("#mandarinaDice .content").classList.add("active")
-            var i = 0
-            arrBtns.forEach(btn => {
-                document.querySelector("#mandarinaDice #mandarinaDiceBtns").innerHTML += `
-                    <button class="btn ${btn.color}" data-index="${i++}">${btn.text}</button>
-                `
-            })
-    
-            document.querySelectorAll("#mandarinaDice button").forEach(btn => {
-                btn.addEventListener("click", e => {
-                    // Limpiar mensaje y resolver
-                    document.querySelector("#mandarinaDice").innerHTML = ""
-                    document.querySelector("#mandarinaDice").classList.remove("active")
-                    resolve(e.target.dataset.index)
-                })
-            })
-        })
-    }
-
-    static error(obj){
-        return new Promise((resolve, reject) => {
-            // Desagregar objeto mensaje
-            // let type    = ["error"]
-            let title   = (obj.title)?obj.title:"Error"
-            let text    = (obj.text)?obj.text:"Ha ocurrido un error inesperado..."
-            let arrBtns = (obj.btn)?obj.btn:[{text:"Ok",color:"l-notify"}]
-            let body    = `
-                <div class="content white">
-                    <div class="dice-header" id="mandarinaDiceTitle">
-                        <h1 class="text-red">❌</h1>
-                        <br>
-                        <h3>${title}</h3>
-                    </div>
-                    <div class="dice-body" id="mandarinaDiceText">
-                        <p>${text}</p>
-                    </div>
-                    <div class="dice-footer" id="mandarinaDiceBtns"></div>
-                </div>
-            `
-    
-            // Escribir mensaje e Insertar botones
-            document.querySelector("#mandarinaDice").innerHTML = body
-            document.querySelector("#mandarinaDice").classList.add("active")
-            document.querySelector("#mandarinaDice .content").classList.add("active")
-            var i = 0
-            arrBtns.forEach(btn => {
-                document.querySelector("#mandarinaDice #mandarinaDiceBtns").innerHTML += `
-                    <button class="btn ${btn.color}" data-index="${i++}">${btn.text}</button>
-                `
-            })
-    
-            document.querySelectorAll("#mandarinaDice button").forEach(btn => {
-                btn.addEventListener("click", e => {
-                    // Limpiar mensaje y resolver
-                    document.querySelector("#mandarinaDice").innerHTML = ""
-                    document.querySelector("#mandarinaDice").classList.remove("active")
-                    resolve(e.target.dataset.index)
-                })
-            })
-        })
-    }
+    Mandarina.get("body").appendChild(dice)
 
 
-    static ok(obj){
-        return new Promise((resolve, reject) => {
-            // Desagregar objeto mensaje
-            // let type    = ["ok"]
-            let title   = (obj.title)?obj.title:"Enhorabuena"
-            let text    = (obj.text)?obj.text:"Completado con éxito"
-            let arrBtns = (obj.btn)?obj.btn:[{text:"Ok",color:"l-notify"}]
-            let body    = `
-                <div class="content white">
-                    <div class="dice-header" id="mandarinaDiceTitle">
-                        <h1 class="text-green">✔️</h1>
-                        <br>
-                        <h3>${title}</h3>
-                    </div>
-                    <div class="dice-body" id="mandarinaDiceText">
-                        <p>${text}</p>
-                    </div>
-                    <div class="dice-footer" id="mandarinaDiceBtns"></div>
-                </div>
-            `
+    // Iniciar Mandarina Spinner
+    let spinner = document.createElement("div")
+    let content = document.createElement("div")
+    let mask1 = document.createElement("div")
+    let mask2 = document.createElement("div")
     
-            // Escribir mensaje e Insertar botones
-            document.querySelector("#mandarinaDice").innerHTML = body
-            document.querySelector("#mandarinaDice").classList.add("active")
-            document.querySelector("#mandarinaDice .content").classList.add("active")
-            var i = 0
-            arrBtns.forEach(btn => {
-                document.querySelector("#mandarinaDice #mandarinaDiceBtns").innerHTML += `
-                    <button class="btn ${btn.color}" data-index="${i++}">${btn.text}</button>
-                `
-            })
-    
-            document.querySelectorAll("#mandarinaDice button").forEach(btn => {
-                btn.addEventListener("click", e => {
-                    // Limpiar mensaje y resolver
-                    document.querySelector("#mandarinaDice").innerHTML = ""
-                    document.querySelector("#mandarinaDice").classList.remove("active")
-                    resolve(e.target.dataset.index)
-                })
-            })
-        })
-    }
+    spinner.setAttribute("class","mandarinaSpinner")
+    content.setAttribute("class","content")
+    mask1.setAttribute("class","mask1")
+    mask2.setAttribute("class","mask2")
+
+    spinner.appendChild(content)
+    spinner.appendChild(mask1)
+    spinner.appendChild(mask2)
+    Mandarina.get("body").appendChild(spinner)
 
 
-    static warning(obj){
-        return new Promise((resolve, reject) => {
-            // Desagregar objeto mensaje
-            // let type    = ["warning"]
-            let title   = (obj.title)?obj.title:"Atención"
-            let text    = (obj.text)?obj.text:"Está a punto de realizar cambios en el sistema"
-            let arrBtns = (obj.btn)?obj.btn:[{text:"Sí 👍",color:"l-green"}, {text:"No 👎",color:"l-red"}]
-            let body    = `
-                <div class="content white">
-                    <div class="dice-header" id="mandarinaDiceTitle">
-                        <h1 class="text-green">⚠️</h1>
-                        <br>
-                        <h3>${title}</h3>
-                    </div>
-                    <div class="dice-body" id="mandarinaDiceText">
-                        <p>${text}</p>
-                    </div>
-                    <div class="dice-footer" id="mandarinaDiceBtns"></div>
-                </div>
-            `
-    
-            // Escribir mensaje e Insertar botones
-            document.querySelector("#mandarinaDice").innerHTML = body
-            document.querySelector("#mandarinaDice").classList.add("active")
-            document.querySelector("#mandarinaDice .content").classList.add("active")
-            var i = 0
-            arrBtns.forEach(btn => {
-                document.querySelector("#mandarinaDice #mandarinaDiceBtns").innerHTML += `
-                    <button class="btn ${btn.color}" data-index="${i++}">${btn.text}</button>
-                `
-            })
-    
-            document.querySelectorAll("#mandarinaDice button").forEach(btn => {
-                btn.addEventListener("click", e => {
-                    // Limpiar mensaje y resolver
-                    document.querySelector("#mandarinaDice").innerHTML = ""
-                    document.querySelector("#mandarinaDice").classList.remove("active")
-                    resolve(e.target.dataset.index)
-                })
-            })
-        })
-    }
+    // Iniciar Alert
+    Mandarina.getAll(".alert").forEach(alert => alert.addEventListener("click",() => {
+        alert.classList.add("alert-close")
+        setTimeout(() => {
+            alert.hidden = true
+        }, 500);
+    }))
 
-    static info(obj){
-        return new Promise((resolve, reject) => {
-            // Desagregar objeto mensaje
-            // let type    = ["warning"]
-            let title   = (obj.title)?obj.title:"Notificación"
-            let text    = (obj.text)?obj.text:"¿Confirma que desea proceder con los cambios?"
-            let arrBtns = (obj.btn)?obj.btn:[{text:"Si 👍",color:"l-green"}, {text:"No 👎",color:"l-red"}]
-            let body    = `
-                <div class="content white">
-                    <div class="dice-header" id="mandarinaDiceTitle">
-                        <h1 class="text-blue">❔</h1>
-                        <br>
-                        <h3>${title}</h3>
-                    </div>
-                    <div class="dice-body" id="mandarinaDiceText">
-                        <p>${text}</p>
-                    </div>
-                    <div class="dice-footer" id="mandarinaDiceBtns"></div>
-                </div>
-            `
-    
-            // Escribir mensaje e Insertar botones
-            document.querySelector("#mandarinaDice").innerHTML = body
-            document.querySelector("#mandarinaDice").classList.add("active")
-            document.querySelector("#mandarinaDice .content").classList.add("active")
-            var i = 0
-            arrBtns.forEach(btn => {
-                document.querySelector("#mandarinaDice #mandarinaDiceBtns").innerHTML += `
-                    <button class="btn ${btn.color}" data-index="${i++}">${btn.text}</button>
-                `
-            })
-    
-            document.querySelectorAll("#mandarinaDice button").forEach(btn => {
-                btn.addEventListener("click", e => {
-                    // Limpiar mensaje y resolver
-                    document.querySelector("#mandarinaDice").innerHTML = ""
-                    document.querySelector("#mandarinaDice").classList.remove("active")
-                    resolve(e.target.dataset.index)
-                })
-            })
-        })
-    }
 
-}
-new Mandarina()
-/*
- *
- * COMPONENT : @Alert
- * AUTOR : Mandarina
- * FECHA : 2021/06/01
- * NOTA  : ""
- *
-*/
-class Alert
-{
-    constructor(alert){
-        alert.addEventListener("click",() => {
-            alert.classList.add("alert-close")
-            setTimeout(() => {
-                alert.hidden = true
-            }, 500);
-        })
-    }
-}
-document.querySelectorAll(".alert").forEach(alert => {
-    new Alert(alert)
-})
-/*
- *
- * COMPONENT : @Drawer
- * AUTOR : Mandarina
- * FECHA : 2021/06/01
- * NOTA  : ""
- *
-*/
-class Drawer
-{
-    constructor(drawer) {
-        this.drawer = "#"+drawer.id //#DRAWER1
-        // TOGGLE MODAL
-        document.querySelectorAll(".drawer-open").forEach(btn => {
-            if (btn.dataset.target == this.drawer) {
+    // Iniciar Drawer
+    Mandarina.getAll(".drawer").forEach(drawer => {
+        let id = "#"+drawer.id //#DRAWER1
+        Mandarina.getAll(".drawer-open").forEach(btn => {
+            if (btn.dataset.target == id) {
                 btn.addEventListener("click", () => {
                     drawer.classList.toggle("active")
                     btn.classList.toggle("active")
                 })
             }
         })
-    }
-}
-document.querySelectorAll(".drawer").forEach(drawer => {
-    new Drawer(drawer)
-})
-/*
- *
- * COMPONENT : @Modal
- * AUTOR : Mandarina
- * FECHA : 2021/06/01
- * NOTA  : ""
- *
-*/
-class Modal
-{
-    constructor(modal){
-        this.modal = "#"+modal.id // #MODAL1
-        // ABRIR MODAL
-        document.querySelectorAll(".modal-open").forEach(btn => {
-            if (btn.dataset.target == this.modal) {
+    })
+
+
+    // Iniciar Modal
+    Mandarina.getAll(".modal").forEach(modal => {
+        let id = "#"+modal.id // #MODAL1
+        // Abrir Modal
+        Mandarina.getAll(".modal-open").forEach(btn => {
+            if (btn.dataset.target == id) {
                 btn.addEventListener("click", () => {
-                    document.querySelector(this.modal).classList.add("active")
+                    Mandarina.get(id).classList.add("active")
                 })
             }
         })
-        // CERRAR MODAL
-        document.querySelectorAll(this.modal+" .modal-close").forEach(btn => {
+        // Cerrar Modal
+        Mandarina.getAll(id+" .modal-close").forEach(btn => {
             btn.addEventListener("click", () => {
-                document.querySelector(this.modal).classList.remove("active")
+                Mandarina.get(id).classList.remove("active")
             })
         })
-    }
-}
-document.querySelectorAll(".modal").forEach(modal => {
-    new Modal(modal)
-})
-/*
- *
- * COMPONENT : @Navbar
- * AUTOR : Mandarina
- * FECHA : 2021/06/01
- * NOTA  : ""
- *
-*/
-class Navbar
-{
-    constructor(menu) {
-        this.menu = "#" + menu.id // #MENU1
-        // TOGGLE MENU
-        document.querySelectorAll(".menu-open").forEach(btn => {
-            if (btn.dataset.target == this.menu) {
+    })
+
+
+    // Iniciar Navbar
+    Mandarina.getAll(".navbar .menu").forEach(menu => {
+        let id = "#" + menu.id // #MENU1
+        Mandarina.getAll(".menu-open").forEach(btn => {
+            if (btn.dataset.target == id) {
                 btn.addEventListener("click", () => {
                     menu.classList.toggle("active")
                     btn.classList.toggle("active")
                 })
             }
         })
-    }
-}
-document.querySelectorAll(".navbar .menu").forEach(menu => {
-    new Navbar(menu)
+    })
+
+
+    // Iniciar Tab
+    Mandarina.getAll(".tab").forEach(tab => {
+        let id = "#"+tab.id
+        Mandarina.getAll(id+">.tab-header>.tab-open").forEach(tabOpen => {
+            tabOpen.addEventListener("click", () => {
+                // Desactivar todos los Tabs
+                Mandarina.getAll(id+">.tab-header>.tab-open, "+id+">.tab-body>.tab-content").forEach(elem => {
+                    elem.classList.remove("active")
+                })
+                // Activar Tab
+                tabOpen.classList.add("active")
+                Mandarina.get(id+">.tab-body>.tab-content"+tabOpen.dataset.target).classList.add("active")
+            })
+        })
+    })
+
+
+
+    // Ready
+    console.log("Mandarina is ready...\nCheck the documentation: https://mandarinacss.github.io/mandarina/")
 })
+
+/**
+ * @name Mandarina
+ * @author Mandarina
+ * @version 2021/09/03
+ */
+class Mandarina
+{
+    // Métodos auxiliares
+    static get = (selector) => document.querySelector(selector)
+    static getAll = (selector) => document.querySelectorAll(selector)
+
+
+    // Métodos de Mandarina Dice
+    static dice(obj) {
+        return new Promise((resolve, reject) => {
+            // Establecer icono
+            let icon
+            switch (obj.icon) {
+                case false: icon = "❔"; break
+                case "ok": icon = "✔️"; break
+                case "error": icon = "❌";  break
+                case "warning": icon = "⚠️"; break
+                case "info": icon = "❔"; break
+                default: icon = obj.icon; break
+            }
+            // Desagregar objeto mensaje
+            let title   = obj.title?obj.title:"Aviso"
+            let text    = obj.text
+            let arrBtns = obj.btn?obj.btn:[{text:"Ok",color:"l-notify"}]
+            let body    = `
+                <div class="content white">
+                    <div class="dice-header" id="mandarinaDiceTitle">
+                        <h1>${icon}</h1>
+                        <h3>${title}</h3>
+                    </div>
+                    <div class="dice-body" id="mandarinaDiceText">
+                        <p>${text}</p>
+                    </div>
+                    <div class="dice-footer" id="mandarinaDiceBtns"></div>
+                </div>
+            `
+            // Escribir mensaje e Insertar botones
+            this.get("#mandarinaDice").innerHTML = body
+            this.get("#mandarinaDice").classList.add("active")
+            this.get("#mandarinaDice .content").classList.add("active")
+            var i = 0
+            arrBtns.forEach(btn => {
+                this.get("#mandarinaDice #mandarinaDiceBtns").innerHTML += `
+                    <button class="btn ${btn.color}" data-index="${i++}">${btn.text}</button>
+                `
+            })
+            document.querySelectorAll("#mandarinaDice button").forEach(btn => {
+                btn.addEventListener("click", e => {
+                    // Limpiar mensaje y resolver
+                    this.get("#mandarinaDice").innerHTML = ""
+                    this.get("#mandarinaDice").classList.remove("active")
+                    resolve(e.target.dataset.index)
+                })
+            })
+        })
+    }
+    static ok(obj){
+        return new Promise((resolve, reject) => {
+            let title   = obj.title?obj.title:"Enhorabuena"
+            let text    = obj.text?obj.text:"Completado con éxito"
+            let arrBtns = [{text:"Ok",color:"l-green"}]
+            this.dice({title:title, text:text, btn:arrBtns, icon:"ok"}).then(index => resolve(index))
+        })
+    }
+    static error(obj){
+        return new Promise((resolve, reject) => {
+            let title   = obj.title?obj.title:"Error"
+            let text    = obj.text?obj.text:"Ha ocurrido un error inesperado..."
+            let arrBtns = [{text:"Ok",color:"l-red"}]
+            this.dice({title:title, text:text, btn:arrBtns, icon:"error"}) .then(index => resolve(index))
+        })
+    }
+    static warning(obj){
+        return new Promise((resolve, reject) => {
+            let title   = obj.title?obj.title:"Atención"
+            let text    = obj.text?obj.text:"Está a punto de realizar cambios en el sistema"
+            let arrBtns = [{text:"Sí 👍",color:"l-green"}, {text:"No 👎",color:"l-red"}]
+            this.dice({title:title, text:text, btn:arrBtns, icon:"warning"}).then(index => resolve(index))
+        })
+    }
+    static info(obj){
+        return new Promise((resolve, reject) => {
+            let title   = obj.title?obj.title:"Notificación"
+            let text    = obj.text?obj.text:"¿Confirma que desea proceder con los cambios?"
+            let arrBtns = [{text:"Sí 👍",color:"l-green"}, {text:"No 👎",color:"l-red"}]
+            this.dice({title:title, text:text, btn:arrBtns, icon:"info"}).then(index => resolve(index))
+        })
+    }
+
+
+    // Métodos de Modal
+    static modalShow = (selector) => this.get(selector).classList.add("active")
+    static modalHide = (selector) => this.get(selector).classList.remove("active")
+
+
+    // Métodos de Spinner
+    static spinnerShow = () => this.get(".mandarinaSpinner").classList.add("active")
+    static spinnerHide = () => this.get(".mandarinaSpinner").classList.remove("active")
+
+}
+new Mandarina()
+
+
+
+
+
 /*
  *
  * COMPONENT : @Slider
@@ -367,7 +229,7 @@ document.querySelectorAll(".navbar .menu").forEach(menu => {
  * NOTA  : ""
  *
 */
-class Slider
+class MandarinaSlider
 {
     constructor(slider) {
         this.slider = "#"+slider.id
@@ -418,81 +280,5 @@ class Slider
     }
 }
 document.querySelectorAll(".slider").forEach(slider => {
-    new Slider(slider)
+    new MandarinaSlider(slider)
 })
-/*
- *
- * COMPONENT : @Spinner
- * AUTOR : Mandarina
- * FECHA : 2021/06/01
- * NOTA  : ""
- *
-*/
-class Spinner
-{
-    constructor() {
-        let spinner = document.createElement("div")
-        let content = document.createElement("div")
-        let mask1 = document.createElement("div")
-        let mask2 = document.createElement("div")
-        
-        spinner.setAttribute("class","spinner")
-        content.setAttribute("class","content")
-        mask1.setAttribute("class","mask1")
-        mask2.setAttribute("class","mask2")
-
-        spinner.appendChild(content)
-        spinner.appendChild(mask1)
-        spinner.appendChild(mask2)
-
-        document.querySelector("body").appendChild(spinner)
-    }
-
-    static show() {
-        document.querySelector(".spinner").classList.add("active")
-    }
-
-    static hide() {
-        document.querySelector(".spinner").classList.remove("active")
-    }
-}
-new Spinner()
-/*
- *
- * COMPONENT : @Tab
- * AUTOR : Mandarina
- * FECHA : 2021/06/01
- * NOTA  : ""
- *
-*/
-class Tab
-{
-    constructor(tab) {
-        this.tab = "#"+tab.id
-        
-        document.querySelectorAll(this.tab+">.tab-header>.tab-open").forEach(tabOpen => {
-            tabOpen.addEventListener("click", () => {
-                // DESACTIVAR TODOS LOS TAB
-                document.querySelectorAll(this.tab+">.tab-header>.tab-open, "+this.tab+">.tab-body>.tab-content").forEach(elem => {
-                    elem.classList.remove("active")
-                })
-
-                // ACTIVAR TAB
-                tabOpen.classList.add("active")
-                document.querySelector(this.tab+">.tab-body>.tab-content"+tabOpen.dataset.target).classList.add("active")
-            })
-        })
-    }
-}
-document.querySelectorAll(".tab").forEach(tab => {
-    new Tab(tab)
-})
-
-/*
- *
- * COMPONENT : @
- * AUTOR : Mandarina
- * FECHA : 2021/06/01
- * NOTA  : ""
- *
-*/

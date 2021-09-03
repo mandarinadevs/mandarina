@@ -908,9 +908,9 @@
 
         <script>
             function openSpinner() {
-                Spinner.show()
+                Mandarina.spinnerShow()
                 setTimeout(() => {
-                    Spinner.hide()
+                    Mandarina.spinnerHide()
                 }, 3000);
             }
         </script>
@@ -921,8 +921,8 @@
                     <code class="language-html">
                         <span class="token doctype">&lt;!-- SPINNER --&gt;</span>
                         <span class="token tag">&lt;script&gt;</span>
-                        <span class="token tag">&nbsp;&nbsp;Spinner.show()</span>
-                        <span class="token tag">&nbsp;&nbsp;Spinner.hide()</span>
+                        <span class="token tag">&nbsp;&nbsp;Mandarina.spinnerShow()</span>
+                        <span class="token tag">&nbsp;&nbsp;Mandarina.spinnerHide()</span>
                         <span class="token tag">&lt;/script&gt;</span>
                     </code>
                 </pre>
@@ -1122,26 +1122,29 @@
 
         <!-- Otros Gajos -->
 
-        <!-- SPINNER -->
+        <!-- DICE -->
         <a href="#dice" id="dice" class="link text-15 text-orange my-5 ml-1">Mandarina Dice</a>
 
         <div class="row">
             <div class="col lg-12 center">
-                <button class="btn l-purple" onclick="openMandarinaDice()">Demostración</button>
+                <button class="btn l-purple" onclick="openMandarinaDice()">Demostración Dice</button>
+                <button class="btn l-green" onclick="Mandarina.ok({})">Demostración Ok</button>
+                <button class="btn l-red" onclick="Mandarina.error({})">Demostración Error</button>
+                <button class="btn l-yellow" onclick="Mandarina.warning({})">Demostración Warning</button>
+                <button class="btn l-sky" onclick="Mandarina.info({})">Demostración Info</button>
             </div>
         </div>
 
         <script>
             function openMandarinaDice() {
-                Mandarina.dice({text:"Esta es una demostración de alerta utilizando promesas"})
+                Mandarina.warning({})
                 .then(sel => {
                     switch (sel) {
                         case "0":
-                            Mandarina.dice({text:"¿Estas seguro de continuar?",btn:[{text:"Ok",color:"l-notify"}]})
+                            Mandarina.ok({})
                             break;
-                    
                         case "1":
-                            Mandarina.dice({text:"¿Estas seguro de cancelar?",btn:[{text:"Sí",color:"l-notify"}]})
+                            Mandarina.error({text:"Ha ocurrido un error (Intencional)"})
                             break;
                     }
                 })
@@ -1154,8 +1157,13 @@
                     <code class="language-html">
                         <span class="token doctype">&lt;!-- MANDARINA DICE --&gt;</span>
                         <span class="token tag">&lt;script&gt;</span>
-                        <span class="token tag">&nbsp;&nbsp;Mandarina.dice({title:"",text:"",type:"",btn:[{text:"",color:""}]})</span>
+                        <span class="token tag">&nbsp;&nbsp;Mandarina.dice({title:"",text:"",icon:"",btn:[{text:"",color:""}]})</span>
                         <span class="token tag">&nbsp;&nbsp;.then(sel => {})</span>
+
+                        <span class="token tag">&nbsp;&nbsp;Mandarina.ok({}))</span>
+                        <span class="token tag">&nbsp;&nbsp;Mandarina.error({})</span>
+                        <span class="token tag">&nbsp;&nbsp;Mandarina.warning({})</span>
+                        <span class="token tag">&nbsp;&nbsp;Mandarina.info({})</span>
                         <span class="token tag">&lt;/script&gt;</span>
                     </code>
                 </pre>

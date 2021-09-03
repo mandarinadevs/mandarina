@@ -1509,7 +1509,7 @@ ol.list>li::before{
  * NOTA  : ""
  *
 */
-.spinner{
+.mandarinaSpinner{
     position: fixed;
     top: 0;
     left: 0;
@@ -1521,7 +1521,7 @@ ol.list>li::before{
     background: rgba(248, 248, 248, 0.5);
     z-index: 1000;
 }
-.spinner>.content{
+.mandarinaSpinner>.content{
     position: relative;
     width: 75px;
     height: 75px;
@@ -1531,7 +1531,7 @@ ol.list>li::before{
     border-left: 7.5px solid transparent;
     border-right: 7.5px solid transparent;
 }
-.spinner>.mask1, .spinner>.mask2{
+.mandarinaSpinner>.mask1, .mandarinaSpinner>.mask2{
     position: absolute;
     width: 75px;
     height: 75px;
@@ -1541,21 +1541,21 @@ ol.list>li::before{
     border-left: 7.5px solid transparent;
     border-right: 7.5px solid transparent;
 }
-.spinner.active{
+.mandarinaSpinner.active{
     display: flex;
 }
-.spinner.active>.content{
+.mandarinaSpinner.active>.content{
     animation-name: spinner;
     animation-iteration-count: infinite;
     animation-duration: 1.5s;
 }
-.spinner.active>.mask1{
+.mandarinaSpinner.active>.mask1{
     animation-name: mask1;
     animation-iteration-count: infinite;
     animation-duration: 1.5s;
     animation-delay: .15s;
 }
-.spinner.active>.mask2{
+.mandarinaSpinner.active>.mask2{
     animation-name: mask2;
     animation-iteration-count: infinite;
     animation-duration: 1.5s;
@@ -1828,7 +1828,8 @@ ol.list>li::before{
     padding: calc(var(--p)*2);
 }
 .mandarinaDice>.content>.dice-body{
-    padding: calc(var(--p)*2);
+    padding-left: calc(var(--p)*2);
+    padding-right: calc(var(--p)*2);
 }
 .mandarinaDice>.content>.dice-footer{
     padding: calc(var(--p)*2);
