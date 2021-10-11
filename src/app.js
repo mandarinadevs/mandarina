@@ -1,5 +1,5 @@
 /**
- * Importar todos los gajos de la mandarina
+ * Importar los scripts de los gajos de la mandarina
  */
 import { hide, show } from './modules/GajoActive'
 import { listenDataSet } from './modules/GajoDataSet'
@@ -124,8 +124,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 
-    // Ready
-    console.log("Mandarina is ready...\nCheck the documentation: https://mandarinacss.github.io/mandarina/")
+    /**
+     * Ready
+     */
+    console.log("Mandarina is ready...\nCheck the documentation: https://mandarinadevs.github.io/mandarina/")
 })
 
 
