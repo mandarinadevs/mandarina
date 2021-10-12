@@ -135,14 +135,18 @@ window.addEventListener("DOMContentLoaded", () => {
 /**
  * Test de Cheatsheet
  */
-document.querySelector('#testSpinner').addEventListener('click', () => {
-    show('#gajo-spinner')
-    setTimeout(() => {
-        hide('#gajo-spinner')
-    }, 3000)
-})
-document.querySelector('#testSayOk').addEventListener('click', () => sayOk())
-document.querySelector('#testSayError').addEventListener('click', () => sayError())
-document.querySelector('#testSayWarning').addEventListener('click', () => sayWarning())
-document.querySelector('#testSayInfo').addEventListener('click', () => sayInfo())
-document.querySelector('#testSayAny').addEventListener('click', () => sayAny({title:'Título', text:'Algún texto personalizado', icon:'&#8987;'}))
+const testDocs = document.querySelector('#mandarina-test-docs')
+if (testDocs) {
+    document.querySelector('#testSpinner').addEventListener('click', () => {
+        show('#gajo-spinner')
+        setTimeout(() => {
+            hide('#gajo-spinner')
+        }, 3000)
+    })
+
+    document.querySelector('#testSayOk').addEventListener('click', () => sayOk())
+    document.querySelector('#testSayError').addEventListener('click', () => sayError())
+    document.querySelector('#testSayWarning').addEventListener('click', () => sayWarning())
+    document.querySelector('#testSayInfo').addEventListener('click', () => sayInfo())
+    document.querySelector('#testSayAny').addEventListener('click', () => sayAny({title:'Título', text:'Algún texto personalizado', icon:'&#8987;'}))
+}

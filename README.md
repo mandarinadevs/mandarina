@@ -14,8 +14,9 @@ Mira la **Guía** para conocer como implementar **Mandarina** en tu proyecto.
 _**Mandarina** es desarrollado en la actual versión con hojas de estilo en cascada o CSS y con la ayuda de la librería Normalize, la cual, agrega una versatilidad extra al enfrentarse a navegadores antiguos. Para las clases interactivas a partir de la versión 2.0 se utiliza ECMAScript 6 en el desarrollo, sin embargo, ya ha sido compilado a JavaScript primitivo con el fin de acomodarse a cualquier navegador_
 
 * [Babel](https://babeljs.io/) - Babel is a JavaScript compiler.
-* [Webpack](https://webpack.js.org/) - Bundle your assets
-* [Normalize](https://necolas.github.io/normalize.css/) - A modern, HTML5-ready alternative to CSS resets
+* [Webpack](https://webpack.js.org/) - Bundle your assets.
+* [Normalize](https://necolas.github.io/normalize.css/) - A modern, HTML5-ready alternative to CSS resets.
+* [Hero Patterns](https://www.heropatterns.com/) - A collection of repeatable SVG background patterns for you to use on your web projects.
 
 
 ### Instalación 🔧
