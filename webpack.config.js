@@ -1,10 +1,10 @@
 const path = require('path');
 
 module.exports = {
-  // mode: 'development',
-  mode: 'production',
+  mode: 'development',
+  // mode: 'production',
     entry: {
-      mandarina: './src/app.js'
+      mandarina: './src/mandarina.js'
   },
   output: {
     filename: '[name].js',

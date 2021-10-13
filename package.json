@@ -9,6 +9,6 @@
     },
     "scripts": {
         "build": "webpack --watch",
-        "build-babel": "babel src -d lib"
+        "build-babel": "babel src/mandarina.js -d ."
     }
 }
